@@ -66,11 +66,9 @@ Citizen.CreateThread(function()
 				repeat 
 					Wait(0)
 					p = GetGameplayCamRelativePitch()
-					Citizen.Trace(p)
 					if GetFollowPedCamViewMode() ~= 4 then
 						SetGameplayCamRelativePitch(p+0.1, 0.2)
 					end
-					Citizen.Trace(p)
 					tv = tv+0.1
 				until tv >= recoils[wep]
 			end
